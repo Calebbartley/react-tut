@@ -3,7 +3,7 @@ import TitleBar from './Titlebar/titleBar';
 import BookViewer from './BookViewer/bookViewer';
 import './app.css';
 import BookCreator from './BookCreator/bookCreator';
-
+import Footer from './Footer/footer';
 
 class App extends Component {
     constructor(props) {
@@ -54,6 +54,7 @@ class App extends Component {
                 <TitleBar />
                 <BookViewer book={this.books[this.state.bookNumber]} nextBook={() => this.goToNextBook()} previousBook={()=> this.goToPreviousBook()}/>
                 <BookCreator addNewBook={this.addNewBook.bind(this)}/>
+                <Footer />
                 </div>
         );
     }
